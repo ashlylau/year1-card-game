@@ -10,7 +10,7 @@ public class TestDecks {
         System.out.println(d.toString());
         d.shuffle();
         System.out.println(d.toString());
-        d.order();
+        d.insertionSort();
         System.out.println(d.toString());
     }
 
@@ -31,7 +31,6 @@ public class TestDecks {
         h.addCard(new Card(Rank.SEVEN, Suit.HEARTS));
         h.addCard(new Card(Rank.SIX, Suit.CLUBS));
         System.out.println(h.toString());
-        h.sortHand();
         System.out.println(h.toString());
     }
 

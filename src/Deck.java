@@ -34,6 +34,27 @@ public class Deck {
         }
     }
 
+    public void insertionSort() {
+
+        Card temp;
+        for (int i = 1; i < cards.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (cards[j].getRank().lessThan(cards[j - 1].getRank())) {
+                    temp = cards[j];
+                    cards[j] = cards[j - 1];
+                    cards[j - 1] = temp;
+                }
+                if (cards[j].getRank().equals(cards[j - 1].getRank())) {
+                    if (cards[j].getSuit().lessThan(cards[j - 1].getSuit())) {
+                        temp = cards[j];
+                        cards[j] = cards[j - 1];
+                        cards[j - 1] = temp;
+                    }
+                }
+            }
+        }
+    }
+
 
     public void swapCards(int a, int b) {
         Card temp = cards[a];
