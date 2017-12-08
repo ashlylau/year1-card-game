@@ -18,21 +18,6 @@ public class Deck {
         System.out.println(toString());
     }
 
-    public void order() {
-        int index = 0;
-        for (int i = 0; i < cards.length; i++) {
-            if (cards[i].getRank().lessThan(cards[index].getRank())) {
-                swapCards(i, index);
-                index = i;
-            }
-            if (cards[i].getRank().equals(cards[index].getRank())) {
-                if (cards[i].getSuit().lessThan(cards[index].getSuit())) {
-                    swapCards(i, index);
-                    index = i;
-                }
-            }
-        }
-    }
 
     public void insertionSort() {
 

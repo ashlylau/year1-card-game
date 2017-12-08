@@ -31,6 +31,7 @@ public class TestDecks {
         h.addCard(new Card(Rank.SEVEN, Suit.HEARTS));
         h.addCard(new Card(Rank.SIX, Suit.CLUBS));
         System.out.println(h.toString());
+        h.insertionSort();
         System.out.println(h.toString());
     }
 
